@@ -137,6 +137,8 @@ p#id-selector-2 {
 }
 .pos-relative {
   position: relative;
+}
+.pos-box {
   height: 150px;
 }
 .pos-absolute-10-10 {
@@ -158,4 +160,7 @@ p#id-selector-2 {
   position: fixed;
   right: 0px;
   bottom: 50%;
+}
+.zindex-bring-to-front {
+  z-index: 10;
 }
