@@ -23,7 +23,8 @@
         should avoid using the style attribute
       </p>
       <h3>Style Tag</h3>
-      <p>
+      <p class="styled-p">
+        <!-- Added a class to make it easy to style only this paragraph -->
         A slightly better way to configure look and feel is to declare CSS rules
         in the STYLE tag in the header and then refer to the tag by their name,
         ID, or class This paragraph's style is set by a rule referring to the P
@@ -33,7 +34,7 @@
     <div>
       <h2>Selectors</h2>
       <h3>Link tag</h3>
-      <p id="link-example">
+      <p class="styled-p">
         The best way to apply CSS rules is to declare them in a separate CSS
         file and load it with the LINK tag. Always use this method.
       </p>
@@ -73,6 +74,21 @@
           depending on the document structure
         </p>
       </div>
+    </div>
+    <div>
+      <h2>Colors</h2>
+      <h3 class="fg-color-blue">Foreground color</h3>
+      <p class="fg-color-red">
+        The text in this paragraph is red but
+        <span class="fg-color-green">this text is green</span>
+      </p>
+      <h3 class="bg-color-blue fg-color-white">Background color</h3>
+      <p class="bg-color-red fg-color-black">
+        This background of this paragraph is red but
+        <span class="bg-color-green fg-color-white">
+          the background of this text is green and the foreground white</span
+        >
+      </p>
     </div>
   </body>
 </html>
