@@ -1,0 +1,23 @@
+p {
+  background-color: burlywood;
+}
+p#id-selector-1 {
+  background-color: red;
+  color: white;
+}
+p#id-selector-2 {
+  background-color: yellow;
+  color: black;
+}
+.class-selector {
+  background-color: chartreuse;
+  color: blue;
+}
+.selector-1 .selector-3 {
+  background-color: red;
+  color: white;
+}
+.selector-2 > .selector-3 > .selector-4 {
+  background-color: yellow;
+  color: blue;
+}
