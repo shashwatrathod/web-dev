@@ -3,14 +3,13 @@ body {
   box-sizing: border-box;
   background-color: var(--bg-primary);
   --text-primary: white;
-  --text-secondary: rgb(47, 51, 54);
+  --text-secondary: rgb(110, 118, 125);
   --bg-primary: black;
   --bg-secondary: #202327;
-  --hint-color: rgb(26, 140, 216);
+  --hint-color: rgb(29, 161, 242);
 }
 
 .container {
-  padding-inline: 16px;
   border-left: 1px solid var(--bg-secondary);
   border-right: 1px solid var(--bg-secondary);
   width: min(90%, 700px);
@@ -25,10 +24,18 @@ body {
   color: var(--text-secondary);
 }
 
+.wd-explore-navbar {
+  padding-inline: 16px;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
 .wd-navbar-searchbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-inline-end: 12px;
 }
+
 .wd-navbar-search {
   width: 80%;
   height: 35px;
@@ -40,7 +47,29 @@ body {
 
 .wd-tuiter-explore-settings-icon {
   stroke: var(--hint-color);
-  margin-left: 12px;
   display: inline-block;
   cursor: pointer;
+}
+
+.wd-horizontal-navbar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-inline: auto;
+  margin-bottom: 0;
+}
+
+.wd-horizontal-navbar-item {
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.wd-horizontal-navbar-item--active {
+  color: var(--hint-color);
+  border-bottom: 2px solid var(--hint-color);
 }
