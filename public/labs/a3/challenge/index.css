@@ -150,3 +150,35 @@
   background: yellow;
   width: 200px;
 }
+
+@media (max-width: 1920px) {
+  .responsive-h2 {
+    background-color: red;
+  }
+
+  .responsive-p {
+    background-color: turquoise;
+  }
+}
+
+@media (max-width: 1440px) {
+  .responsive-h2 {
+    background-color: turquoise;
+  }
+
+  .responsive-p {
+    background-color: red;
+  }
+}
+
+@media (max-width: 900px) {
+  .responsive-h2 {
+    background-color: blue;
+    color: white;
+  }
+
+  .responsive-p {
+    background-color: yellow;
+    color: black;
+  }
+}
