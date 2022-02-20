@@ -1,0 +1,184 @@
+.rotate-paragraph {
+  width: 250px;
+  height: 250px;
+  transform: rotate(90deg);
+}
+
+.rotate-list {
+  transform: rotate(12deg);
+  width: 100px;
+  background-color: red;
+  color: white;
+}
+
+.rotate-list-items li {
+  width: 100px;
+  text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+  transform: rotate(-10deg);
+  background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+  transform: rotate(2deg);
+  background-color: blue;
+  color: white;
+}
+.rotate-list-items li:nth-child(3) {
+  transform: rotate(10deg);
+  background-color: red;
+}
+.rotate-image {
+  transform: rotate(-10deg);
+}
+.rotate-table {
+  position: relative;
+  left: 50px;
+  transform: rotate(15deg);
+}
+.rotate-table tr:nth-child(1) {
+  background-color: black;
+  color: white;
+}
+.rotate-table tr:nth-child(n + 2) {
+  background-color: yellow;
+}
+.rotate-table tr:nth-child(n + 5) {
+  background-color: blue;
+  color: white;
+}
+.rotate-table tr:nth-child(n + 8) {
+  background-color: red;
+}
+.rotate-table tr:nth-child(n + 11) {
+  background-color: green;
+  color: white;
+}
+.gradients-linear {
+  background: linear-gradient(aqua, blue);
+  width: 200px;
+  height: 200px;
+}
+.gradients-radial {
+  background: radial-gradient(blue, cyan);
+  width: 200px;
+  height: 200px;
+}
+.gradients-positioned {
+  background: radial-gradient(at bottom right, green, orange);
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+
+.animation-keyframes {
+  position: relative;
+  top: 0px;
+  animation-duration: 3s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: aquamarine;
+  color: black;
+  width: 25%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flex-container {
+  width: 1000px;
+  height: 400px;
+  background: red;
+  display: flex;
+  gap: 2rem;
+}
+
+.flex-item {
+  width: 200px;
+  height: 100px;
+  background: yellow;
+}
+
+.flex-j-center {
+  justify-content: center;
+}
+
+.flex-j-start {
+  justify-content: flex-start;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.flex-j-around {
+  justify-content: space-around;
+}
+
+.flex-j-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-j-between {
+  justify-content: space-between;
+}
+
+.flex-a-center {
+  align-items: center;
+}
+
+.flex-a-start {
+  align-items: flex-start;
+}
+
+.flex-a-end {
+  align-items: flex-end;
+}
+
+.flex-a-stretch {
+  align-items: stretch;
+}
+
+.flex-item-stretch {
+  background: yellow;
+  width: 200px;
+}
+
+@media (max-width: 1920px) {
+  .responsive-h2 {
+    background-color: red;
+  }
+
+  .responsive-p {
+    background-color: turquoise;
+  }
+}
+
+@media (max-width: 1440px) {
+  .responsive-h2 {
+    background-color: turquoise;
+  }
+
+  .responsive-p {
+    background-color: red;
+  }
+}
+
+@media (max-width: 900px) {
+  .responsive-h2 {
+    background-color: blue;
+    color: white;
+  }
+
+  .responsive-p {
+    background-color: yellow;
+    color: black;
+  }
+}
