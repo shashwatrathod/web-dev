@@ -10,3 +10,23 @@
   height: 48px;
   width: 48px;
 }
+
+.search-parent {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-bar {
+  padding-left: 10%;
+}
+
+.fa-gear {
+  color: var(--bs-primary);
+  cursor: pointer;
+}
