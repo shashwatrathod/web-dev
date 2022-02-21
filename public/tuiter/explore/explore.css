@@ -1,0 +1,11 @@
+.btn-pill {
+  border-radius: 25px;
+}
+
+/* *Work around to align the stacked icon with rest of the icons */
+.more-btn > span.fa-stack {
+  height: 1.25rem;
+  width: 1.25rem;
+  vertical-align: top;
+  line-height: 2rem;
+}
