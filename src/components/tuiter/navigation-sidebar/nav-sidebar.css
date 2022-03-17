@@ -1,0 +1,12 @@
+/* *Work around to align the stacked icon with rest of the icons */
+span.fa-stack {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: top;
+  line-height: 1.5rem;
+  color: black;
+}
+
+a.list-group-item > span + span {
+  margin-left: 0.5rem;
+}
