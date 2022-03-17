@@ -11,7 +11,7 @@ const ExploreComponent = () => {
           <i className="fa-solid fa-magnifying-glass search-icon"></i>
           <input
             type="text"
-            className="form-control rounded-pill search-bar"
+            className="search-bar form-control rounded-pill"
             placeholder="Search Tuiter"
             aria-label="search"
           />
