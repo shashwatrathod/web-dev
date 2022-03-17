@@ -14,5 +14,6 @@ import WhoToFollowList from "../WhoToFollowList/index.js";
         <div class="col-xxl-3 col-lg-4 d-none d-lg-block">
             ${WhoToFollowList()}
         </div>
+        </div>
     `);
 })($);
