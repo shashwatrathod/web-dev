@@ -1,3 +1,4 @@
+import React from "react";
 import WhoToFollowListItem from "./who-to-follow-list-item";
 import who from "./who.json";
 

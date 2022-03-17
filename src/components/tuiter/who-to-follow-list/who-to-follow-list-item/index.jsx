@@ -1,3 +1,4 @@
+import React from "react";
 import "./who-to-follow-list-item.css";
 
 const WhoToFollowListItem = ({

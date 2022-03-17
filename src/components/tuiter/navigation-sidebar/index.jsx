@@ -1,5 +1,5 @@
 import React from "react";
-import navItems from "./navItems.js";
+import navItems from "./navItems.json";
 import "./nav-sidebar.css";
 
 // TODO: Fix Links
