@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post-summary-item.css";
 
 //TODO: Fix links
@@ -14,8 +15,8 @@ const PostSummaryItem = ({
 }) => {
   return (
     <>
-      <a
-        href="#"
+      <Link
+        to="#"
         className="list-group-item list-group-item-action d-flex flex-row justify-content-between align-items-center"
       >
         <div className="d-flex flex-column">
@@ -46,7 +47,7 @@ const PostSummaryItem = ({
           src={post.image}
           alt={post.userName}
         />
-      </a>
+      </Link>
     </>
   );
 };
