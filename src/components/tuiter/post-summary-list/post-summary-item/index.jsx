@@ -15,6 +15,7 @@ const PostSummaryItem = ({
 }) => {
   return (
     <>
+      {/* <Link> instead of <a> is a workaround to avoid linting error.*/}
       <Link
         to="#"
         className="list-group-item list-group-item-action d-flex flex-row justify-content-between align-items-center"
