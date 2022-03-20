@@ -11,7 +11,7 @@ const WhoToFollowListItem = ({
   return (
     <>
       <div className="list-group-item d-flex justify-content-between align-items-center">
-        <div className="d-flex flex-row align-items-center gap-1">
+        <div className="d-flex flex-row align-items-center gap-2">
           <img
             src={who.avatarIcon}
             alt={who.userName}
@@ -19,8 +19,7 @@ const WhoToFollowListItem = ({
           />
           <div>
             <div className="fw-bold text-wrap">
-              {who.userName}
-              <i className="fa-solid fa-circle-check"></i>
+              {who.userName} <i className="fa-solid fa-circle-check"></i>
             </div>
             @{who.handle}
           </div>

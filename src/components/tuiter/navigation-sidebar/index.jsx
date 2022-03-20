@@ -1,21 +1,21 @@
 import React from "react";
 import navItems from "./navItems.json";
 import "./nav-sidebar.css";
+import { Link } from "react-router-dom";
 
-// TODO: Fix Links
 const NavigationSidebar = ({ active = "Explore" }) => {
   return (
     <>
       <div className="list-group">
-        <a href="#" className="list-group-item list-group-item-action">
+        <Link to="#" className="list-group-item list-group-item-action">
           <span>
             <i className="fa-brands fa-twitter"></i>
           </span>
-        </a>
+        </Link>
         {navItems.map((item) => (
           <>
-            <a
-              href={item.link}
+            <Link
+              to={item.link}
               className={`list-group-item list-group-item-action ${
                 item.title === active ? "active" : ""
               }`}
@@ -26,11 +26,11 @@ const NavigationSidebar = ({ active = "Explore" }) => {
                 ))}
               </span>
               <span className="d-none d-xl-inline">{item.title}</span>
-            </a>
+            </Link>
           </>
         ))}
-        <a
-          href="something.html"
+        <Link
+          to="#"
           className={`list-group-item list-group-item-action ${
             "More" === active ? "active" : ""
           }`}
@@ -40,7 +40,7 @@ const NavigationSidebar = ({ active = "Explore" }) => {
             <i className="fa-solid fa-stack-1x fa-ellipsis"></i>
           </span>
           <span className="d-none d-xl-inline">More</span>
-        </a>
+        </Link>
       </div>
       <div class="d-grid mt-2">
         <a href="tweet.html" className="btn btn-primary btn-block rounded-pill">

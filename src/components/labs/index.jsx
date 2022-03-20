@@ -13,7 +13,7 @@ const Labs = () => {
       <ConditionalOutput />
       <Styles />
       <Classes />
-      <Link to="/hello">Hello</Link> | <Link to="/tuiter">Tuiter</Link>
+      <Link to="/hello">Hello</Link> | <Link to="/tuiter/home">Tuiter</Link>
     </>
   );
 };

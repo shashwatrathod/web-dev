@@ -1,12 +1,12 @@
 [
   {
     "title": "Home",
-    "link": "../HomeScreen/home.html",
+    "link": "/tuiter/home",
     "icons": ["fa-solid fa-house-chimney"]
   },
   {
     "title": "Explore",
-    "link": "../ExploreScreen/explore.html",
+    "link": "/tuiter/explore",
     "icons": ["fa-solid fa-hashtag"]
   },
   {

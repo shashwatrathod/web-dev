@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PostSummaryList from "../../post-summary-list";
 import "./explore-component.css";
 import navItems from "./navItems.json";
@@ -24,12 +25,12 @@ const ExploreComponent = () => {
         {navItems.map((item) => (
           <>
             <li className="nav-item">
-              <a
-                href={item.link}
+              <Link
+                to={item.link}
                 className={`nav-link ${item.active ? `active` : ``}`}
               >
                 {item.title}
-              </a>
+              </Link>
             </li>
           </>
         ))}
