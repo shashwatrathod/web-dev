@@ -1,7 +1,6 @@
 import NavigationSidebar from "../navigation-sidebar";
-import PostItem from "../post-list/post-item";
 import PostSummaryList from "../post-summary-list";
-// import HomeComponent from "./home-component/index.js";
+import HomeComponent from "./home-component";
 
 const HomeScreen = () => {
   return (
@@ -11,7 +10,7 @@ const HomeScreen = () => {
           <NavigationSidebar active="Home" />
         </div>
         <div class="col-xl-6 col-lg-7 col-10 d-flex flex-column gap-1">
-          <PostItem />
+          <HomeComponent />
         </div>
         <div class="col-xxl-4 col-lg-4 d-none d-lg-block">
           <PostSummaryList />

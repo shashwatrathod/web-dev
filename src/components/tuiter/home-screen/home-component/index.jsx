@@ -1,8 +1,10 @@
-import PostList from "../PostList/index.js";
+import PostList from "../../post-list";
 
 const HomeComponent = () => {
-  return `
-      ${PostList()}
-    `;
+  return (
+    <>
+      <PostList />
+    </>
+  );
 };
 export default HomeComponent;
