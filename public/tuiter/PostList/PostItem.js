@@ -1,59 +1,57 @@
+import PostItemPreview from "./PostItemPreview.js";
+
 const PostItem = (post) =>
   `
-    <li
-  class="list-group-item d-flex justify-content-between align-items-center"
-    >
-  <div class="wd-bookmark wd-bottom-border">
-    <img src="${post.avatarImage}" alt="" class="rounded-circle avatar" />
-    <div class="wd-bookmark-content">
-      <div class="d-flex flex-row justify-content-between w-100">
-        <div class="fw-bold d-flex align-items-center">
-          ${post.userName}
-          ${
-            post.verified
-              ? `
-          <i class="fa-solid fa-circle-check"></i>`
-              : ``
-          }
-          <div class="text-muted ms-1">@${post.userName}</div>
-          <div class="text-muted ms-1">${post.time}</div>
+  <li class="list-group-item d-flex justify-content-between align-items-center gap-2">
+        <div class="align-self-start">
+          <img
+            src=${post.avatarImage}
+            alt=""
+            class="rounded-circle align-self-start wd-avatar"
+          />
         </div>
-        <div>
-          <i class="fas fa-ellipsis-h text-muted"></i>
-        </div>
-      </div>
-      <div class="pt-1">
-        ${post.content}
-      </div>
-      ${
-        post.preview &&
-        `
-        <a href="${post.preview.link ? post.preview.link : "#"}">
-          <div class="card my-3">
-            <img class="card-img-top img-fluid ${
-              !(post.preview.title || post.preview.description) &&
-              `bottom-rounded`
-            }" src="${post.preview.image}" alt="${post.preview.title}">
-            ${
-              post.preview.title || post.preview.description
-                ? `
-            <div class="card-body">
-              <h6 class="card-title">${post.preview.title}</h6>
-              <p class="card-text mb-1">${post.preview.description}</p>
-              <p class="card-text d-flex align-items-center">
-              <i class="fa fa-link"></i> <span class="ms-2">${post.preview.link}</span></p>
+        <div class="d-flex flex-column gap-1 w-100">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex gap-1">
+              <span class="fw-bold">${post.name}</span>
+              ${
+                post.verified
+                  ? `
+                  <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                  </span>
+                `
+                  : ``
+              }
+              <div class="text-muted ms-1">@${post.userName}</div>
+              <div class="text-muted ms-1">- ${post.time}</div>
             </div>
-            `
-                : ``
-            }
+            <div>
+              <i class="fas fa-ellipsis-h text-muted"></i>
+            </div>
           </div>
-      </a>
-      `
-      }
-      <div class="mt-2 d-flex justify-content-between mx-0 mx-md-2">
-
-      </div>
-    </div>
-  </div>
-</li>`;
+          <div>${post.content}</div>
+          <div>
+            ${PostItemPreview(post.preview)}
+          </div>
+          <div class="d-flex justify-content-between px-2 wd-text-muted">
+            <div>
+              <i class="far fa-comment"></i>
+              <span class="ms-2">${post.comments}</span>
+            </div>
+            <div>
+              <i class="fas fa-retweet"></i>
+              <span class="ms-2">${post.retuits}</span>
+            </div>
+            <div>
+              <i class="far fa-heart"></i>
+              <span class="ms-2">${post.likes}</span>
+            </div>
+            <div>
+              <i class="fas fa-upload pe-3"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+  `;
 export default PostItem;
