@@ -15,6 +15,8 @@ const todosReducer = (state = data, action) => {
   switch (action.type) {
     case "create-todo":
       return [...state, action.todo];
+    case "delete-todo":
+      return state.filter((todo) => todo !== action.todo);
     default:
       return state;
   }
