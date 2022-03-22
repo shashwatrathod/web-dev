@@ -6,12 +6,13 @@ const Todos = () => {
 
   const dispatch = useDispatch();
 
-  const [todo, setTodo] = useState({ do: "" });
+  const [todo, setTodo] = useState({ do: "", done: false });
 
   const todoChangeHandler = (event) => {
     const doValue = event.target.value;
     const newTodo = {
       do: doValue,
+      done: false,
     };
     setTodo(newTodo);
   };
@@ -25,6 +26,14 @@ const Todos = () => {
     dispatch(action);
 
     setTodo({ do: "" });
+  };
+
+  const updateTodoHandler = (todo) => {
+    const action = {
+      type: "update-todo",
+      todo,
+    };
+    dispatch(action);
   };
 
   const deleteTodoHandler = (todoToDelete) => {
@@ -53,6 +62,16 @@ const Todos = () => {
         {todos &&
           todos.map((todo) => (
             <li key={todo._id} className="list-group-item">
+              <input
+                checked={todo.done}
+                onChange={(event) =>
+                  updateTodoHandler({
+                    ...todo,
+                    done: event.target.checked,
+                  })
+                }
+                type="checkbox"
+              />
               {todo.do}
               <button
                 onClick={() => deleteTodoHandler(todo)}
