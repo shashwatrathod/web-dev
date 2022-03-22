@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Todos = () => {
   const todos = useSelector((state) => state.todos);
+
+  const dispatch = useDispatch();
 
   const [todo, setTodo] = useState({ do: "" });
 
@@ -12,6 +14,17 @@ const Todos = () => {
       do: doValue,
     };
     setTodo(newTodo);
+  };
+
+  const createTodoHandler = () => {
+    const action = {
+      type: "create-todo",
+      todo,
+    };
+
+    dispatch(action);
+
+    setTodo({ do: "" });
   };
 
   return (
@@ -24,6 +37,9 @@ const Todos = () => {
             value={todo.do}
             className="form-control"
           />
+          <button onClick={createTodoHandler} className="btn btn-primary">
+            Create New Todo
+          </button>
         </li>
         {todos &&
           todos.map((todo) => (
