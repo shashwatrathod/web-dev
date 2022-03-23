@@ -37,17 +37,17 @@ const ProfileScreen = () => {
         <div className="mt-2">{profile.bio}</div>
         <div className="mt-2 d-flex gap-4">
           <div className="text-muted d-flex gap-1 ">
-            <i class="fa-solid fa-location-dot align-self-center"></i>
+            <i class="fa-solid fa-lg fa-location-dot align-self-center"></i>
             <span className="align-self-center">{profile.location}</span>
           </div>
           <div className="text-muted d-flex gap-1 ">
-            <i class="fa-solid fa-cake-candles align-self-center"></i>
+            <i class="fa-solid fa-lg fa-cake-candles align-self-center"></i>
             <span className="align-self-center">
               Born {profile.dateOfBirth}
             </span>
           </div>
           <div className="text-muted d-flex gap-1 ">
-            <i class="fa-regular fa-calendar-days align-self-center"></i>
+            <i class="fa-regular fa-lg fa-calendar-days align-self-center"></i>
             <span className="align-self-center">
               Joined {profile.dateJoined}
             </span>
