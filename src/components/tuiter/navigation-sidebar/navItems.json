@@ -31,7 +31,7 @@
   },
   {
     "title": "Profile",
-    "link": "#",
+    "link": "/tuiter/profile",
     "icons": ["fa-solid fa-user"]
   }
 ]
