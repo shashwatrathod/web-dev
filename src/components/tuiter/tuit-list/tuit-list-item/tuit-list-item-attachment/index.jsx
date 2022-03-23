@@ -1,6 +1,6 @@
 import React from "react";
+import "./tuit-list-item-attachment.css";
 
-//TODO: maintain styles
 const TuitListItemAttachment = ({ tuit }) => {
   return (
     <>

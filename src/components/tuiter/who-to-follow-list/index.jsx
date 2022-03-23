@@ -9,7 +9,7 @@ const WhoToFollowList = () => {
       <div class="list-group">
         <div class="list-group-item fw-bold">Who to follow</div>
         {who.map((profile) => (
-          <WhoToFollowListItem who={profile} />
+          <WhoToFollowListItem key={profile.handle} who={profile} />
         ))}
       </div>
     </>
