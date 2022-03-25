@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { editProfile } from "../../actions/profile-actions";
 
 const EditProfile = ({ closeEditWindow }) => {
   const profile = useSelector((state) => state.profile);
+
+  const dispatch = useDispatch();
 
   const [firstName, setFirstName] = useState(profile.firstName);
   const [lastName, setLastName] = useState(profile.lastName);
   const [bio, setBio] = useState(profile.bio);
 
   const onProfileSaveHandler = () => {
-    //TODO: Change reducer commands
+    dispatch(editProfile(firstName, lastName, bio));
     closeEditWindow();
   };
   return (

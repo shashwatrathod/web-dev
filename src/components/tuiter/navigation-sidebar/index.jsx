@@ -2,8 +2,11 @@ import React from "react";
 import navItems from "./navItems.json";
 import "./nav-sidebar.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const NavigationSidebar = ({ active = "Explore" }) => {
+const NavigationSidebar = () => {
+  const { active } = useSelector((state) => state.navigation);
+
   return (
     <>
       <div className="list-group">

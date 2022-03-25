@@ -17,7 +17,7 @@ const profileReducer = (state = profileData, action) => {
   switch (action.type) {
     case "edit-profile":
       const { firstName, lastName, bio } = action;
-      return [...state, firstName, lastName, bio];
+      return { ...state, firstName, lastName, bio };
     default:
       return state;
   }

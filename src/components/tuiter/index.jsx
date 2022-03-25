@@ -7,11 +7,13 @@ import { combineReducers, createStore } from "redux";
 import { Provider } from "react-redux";
 import WhoToFollowList from "./who-to-follow-list";
 import tuitsReducer from "./reducers/tuits-reducer";
+import navigationReducer from "./reducers/navigation-reducer";
 
 const combinedReducers = combineReducers({
   who: whoReducer,
   tuits: tuitsReducer,
   profile: profileReducer,
+  navigation: navigationReducer,
 });
 
 const store = createStore(combinedReducers);
