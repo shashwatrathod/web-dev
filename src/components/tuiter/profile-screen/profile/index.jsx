@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import ProfileTopBar from "../profile-top-bar";
 
-const Profile = () => {
+const Profile = ({ openEditWindow }) => {
   const profile = useSelector((state) => state.profile);
   return (
     <>
@@ -22,7 +22,10 @@ const Profile = () => {
             />
           </div>
           <div>
-            <button className="btn btn-outline-dark rounded-pill mt-2">
+            <button
+              className="btn btn-outline-dark rounded-pill mt-2"
+              onClick={() => openEditWindow()}
+            >
               Edit Profile
             </button>
           </div>

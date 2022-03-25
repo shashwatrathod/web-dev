@@ -1,13 +1,26 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import ProfileTopBar from "./profile-top-bar";
+import React, { useCallback, useState } from "react";
 import "./profile-screen.css";
+import EditProfile from "./edit-profile";
 import Profile from "./profile";
 
 const ProfileScreen = () => {
+  const [showEditWindow, setShowEditWindow] = useState(false);
+
+  const closeEditWindow = useCallback(() => {
+    setShowEditWindow(false);
+  }, []);
+
+  const openEditWindow = useCallback(() => {
+    setShowEditWindow(true);
+  }, []);
+
   return (
     <>
-      <Profile />
+      {showEditWindow ? (
+        <EditProfile closeEditWindow={closeEditWindow} />
+      ) : (
+        <Profile openEditWindow={openEditWindow} />
+      )}
     </>
   );
 };
