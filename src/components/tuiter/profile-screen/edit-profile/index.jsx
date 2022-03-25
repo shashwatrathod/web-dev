@@ -35,11 +35,16 @@ const EditProfile = ({ closeEditWindow }) => {
             Save
           </button>
         </div>
-        <img
-          src={profile.bannerPicture}
-          alt={profile.handle}
-          className="wd-profile-banner mt-2"
-        />
+        <div className="mt-2 position-relative">
+          <img
+            src={profile.bannerPicture}
+            alt={profile.handle}
+            className="wd-profile-banner"
+          />
+          <div className="wd-profile-banner wd-edit-banner-pic-overlay position-absolute top-0 d-flex justify-content-center">
+            <i class="fa-solid fa-camera fa-inverse fa-xl align-self-center wd-cursor-pointer"></i>
+          </div>
+        </div>
         <div className="px-3">
           <div className="d-flex justify-content-between">
             <div className="wd-profile-picture-container">
@@ -48,6 +53,9 @@ const EditProfile = ({ closeEditWindow }) => {
                 alt={profile.handle}
                 className="wd-profile-picture"
               />
+              <div className="wd-profile-picture wd-edit-profile-pic-overlay d-flex justify-content-center">
+                <i class="fa-solid fa-camera fa-inverse fa-xl align-self-center wd-cursor-pointer"></i>
+              </div>
             </div>
           </div>
           <div className="mt-2 form-floating">

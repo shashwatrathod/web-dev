@@ -8,6 +8,7 @@
   width: 150px;
   height: 75px;
   position: relative;
+  z-index: 2;
 }
 
 .wd-profile-picture {
@@ -17,4 +18,14 @@
   object-fit: cover;
   position: absolute;
   top: -100%;
+}
+
+.wd-edit-profile-pic-overlay {
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.wd-edit-banner-pic-overlay {
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
 }
