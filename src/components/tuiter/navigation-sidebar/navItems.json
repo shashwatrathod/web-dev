@@ -1,7 +1,7 @@
 [
   {
     "title": "Home",
-    "link": "/tuiter/home",
+    "link": "/tuiter",
     "icons": ["fa-solid fa-house-chimney"]
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "title": "Profile",
-    "link": "#",
+    "link": "/tuiter/profile",
     "icons": ["fa-solid fa-user"]
   }
 ]

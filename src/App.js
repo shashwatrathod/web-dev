@@ -6,17 +6,22 @@ import "./vendors/bootstrap/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeScreen from "./components/tuiter/home-screen";
 import ExploreScreen from "./components/tuiter/explore-screen";
+import ProfileScreen from "./components/tuiter/profile-screen";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <Routes>
-          <Route path="hello" exact={true} element={<HelloWorld />} />
-          <Route path="/" exact={true} element={<Labs />} />
-          <Route path="tuiter" exact={true} element={<Tuiter />} />
-          <Route path="tuiter/home" element={<HomeScreen />} />
-          <Route path="tuiter/explore" element={<ExploreScreen />} />
+          <Route path="/">
+            <Route path="labs" element={<Labs />} />
+            <Route path="hello" element={<HelloWorld />} />
+            <Route path="tuiter" element={<Tuiter />}>
+              <Route index element={<HomeScreen />} />
+              <Route path="explore" element={<ExploreScreen />} />
+              <Route path="profile" element={<ProfileScreen />} />
+            </Route>
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>

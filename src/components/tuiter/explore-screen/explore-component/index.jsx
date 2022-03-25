@@ -7,7 +7,7 @@ import navItems from "./navItems.json";
 const ExploreComponent = () => {
   return (
     <>
-      <div className="row d-flex align-items-center">
+      <div className="row d-flex align-items-center mb-1">
         <div className="col-11 search-parent">
           <i className="fa-solid fa-magnifying-glass search-icon"></i>
           <input
