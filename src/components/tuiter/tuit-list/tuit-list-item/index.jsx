@@ -3,15 +3,13 @@ import TuitListItemAttachment from "./tuit-list-item-attachment";
 import TuitStats from "./tuit-stats";
 import "./tuit-list-item.css";
 import { useDispatch } from "react-redux";
+import { deleteTuit } from "../../actions/tuits-action";
 
 const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
 
   const deleteTuitHandler = (tuit) => {
-    dispatch({
-      type: "delete-tuit",
-      tuit,
-    });
+    dispatch(deleteTuit(tuit));
   };
 
   return (

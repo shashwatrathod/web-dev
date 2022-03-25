@@ -1,15 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { likeTuit } from "../../../actions/tuits-action";
 import "./tuit-stats.css";
 
 const TuitStats = ({ tuit }) => {
   const dispatch = useDispatch();
 
   const tuitLikeHandler = () => {
-    dispatch({
-      type: "like-tuit",
-      tuit,
-    });
+    dispatch(likeTuit(tuit));
   };
   return (
     <>
