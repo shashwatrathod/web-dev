@@ -9,7 +9,7 @@ const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
 
   const deleteTuitHandler = (tuit) => {
-    dispatch(deleteTuit(tuit));
+    deleteTuit(dispatch, tuit);
   };
 
   return (
