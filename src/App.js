@@ -4,9 +4,12 @@ import Tuiter from "./components/tuiter";
 import "./vendors/bootstrap/css/bootstrap.min.css";
 import "./vendors/bootstrap/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import dotenv from "dotenv";
 import HomeScreen from "./components/tuiter/home-screen";
 import ExploreScreen from "./components/tuiter/explore-screen";
 import ProfileScreen from "./components/tuiter/profile-screen";
+
+// dotenv.config();
 
 function App() {
   return (
