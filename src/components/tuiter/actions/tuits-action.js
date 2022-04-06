@@ -50,7 +50,7 @@ export const likeTuit = (tuit) => ({
 });
 
 export const updateTuit = async (dispatch, tuit) => {
-  const status = await service.updateTuit(tuit);
+  await service.updateTuit(tuit);
   dispatch({
     type: UPDATE_TUIT,
     tuit,
