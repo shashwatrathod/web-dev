@@ -1,5 +1,5 @@
 import axios from "axios";
-const TUITS_API = `${process.env.REACT_APP_API_BASE}/api/tuits`;
+const TUITS_API = `${process.env.REACT_APP_MONGO_API_BASE}/api/tuits`;
 
 console.log(TUITS_API);
 
